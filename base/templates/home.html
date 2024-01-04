@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% block content %}
+<h1>Hello, Welcome home</h1> 
+<h2>Not a mamber? <a href="{% url 'join' %}">join Today</a></h2>
+<br>
+{% for members in member %}
+<div>
+    <p>{{members}}</p> <br> <p>their email is {{members.email}} </p>
+    <br> <p>age : {{members.age}}</p>
+    <hr>
+</div>
+{% endfor %}
+{% endblock content %}
